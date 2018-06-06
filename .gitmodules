@@ -1,0 +1,3 @@
+[submodule "src/style"]
+	path = src/style
+	url = https://github.com/WeUI-Pro/weui-pro-style.git
