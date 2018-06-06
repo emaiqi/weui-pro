@@ -1,0 +1,111 @@
+  guide:
+    - title: 品牌
+      name: Guide
+      items:
+        - title: 色彩
+          name: Color
+        - title: 字体
+          name: Typography
+  resource:
+    - title: 资源
+      name: Resource
+      items:
+        - title: 设计资源
+          name: design
+  components:
+    - title: 概述
+      name: Docs
+      items:
+        - title: 开始使用
+          name: Introduction
+        - title: 快速上手
+          name: Quickstart
+        - title: 更新日志
+          name: Changelog
+        - title: 常见问题
+          name: FAQ
+        - title: 贡献指南
+          name: Contributing
+    - title: 组件
+      name: Docs
+      groups:
+        - title: 基础组件
+          items:
+            - title: 头像
+              name: Avatar
+            - title: 徽章
+              name: Badge
+            - title: 文本省略
+              name: Elip
+            - title: 胶囊
+              name: Capsule
+            - title: 价格
+              name: Price
+            - title: 标签
+              name: Tag
+            - title: 页底提示
+              name: Loadmore
+        - title: 页面布局
+          items:
+            - title: 弹性布局
+              name: Flex
+            - title: 九宫格
+              name: Grid
+            - title: 单元格
+              name: Cell
+            - title: 表单分组
+              name: Group
+            - title: 面板组件
+              name: Panel
+        - title: 表单组件
+          items:
+            - title: 输入框
+              name: Field
+            - title: 数字框
+              name: Counter
+            - title: 选择
+              name: Select
+            - title: 评分
+              name: Rate
+            - title: 搜索
+              name: Search
+            - title: 上传
+              name: Upload
+        - title: 操作反馈
+          items:
+            - title: 对话框
+              name: Dialog
+            - title: 弹出层
+              name: Popup
+            - title: 结果页
+              name: Result
+            - title: 顶部提示
+              name: Toptips
+        - title: 信息展示
+          items:
+            - title: 卡片
+              name: Card
+            - title: 列表
+              name: List
+            - title: 通告栏
+              name: Notice
+            - title: 步骤条
+              name: Steps
+            - title: 时间轴
+              name: Timeline
+            - title: 加载提示
+              name: Loading
+            - title: 表单预览
+              name: Preview
+            - title: 倒计时
+              name: Countdown
+            - title: 异常
+              name: Exception
+        - title: 导航组件
+          items:
+            - title: 标签页
+              name: Tabs
+            - title: 选项卡
+              name: Tabbar
+            - title: 导航栏
+              name: Navbar
