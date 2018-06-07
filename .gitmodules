@@ -1,3 +1,3 @@
-[submodule "src/style"]
-	path = src/style
-	url = https://github.com/WeUI-Pro/weui-pro-style.git
+[submodule "style"]
+	path = style
+	url = git://github.com/weui-pro/weui-pro-style.git
