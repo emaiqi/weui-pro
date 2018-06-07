@@ -103,6 +103,15 @@ module.exports = {
     ]
   },
   plugins: [
-    new MpvuePlugin()
+    new MpvuePlugin(),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: function() {
+          return [
+            require('postcss-mpvue-wxss')
+          ]
+        }
+      }
+    })
   ]
 }

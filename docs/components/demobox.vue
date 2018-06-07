@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import CollapseTransition from 'src/utils/collapse-transition'
+import CollapseTransition from '../utils/collapse-transition'
 
 export default {
   components: {

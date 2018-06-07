@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App'
+import App from './app'
 import router from './router'
 import DemoBox from './components/demobox'
 import IconList from './components/iconlist'
