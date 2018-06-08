@@ -5,6 +5,7 @@ var config = require('../config')
 var isProduction = true
 
 module.exports = {
+  postcss: [require('postcss-mpvue-wxss')],
   loaders: utils.cssLoaders({
     sourceMap: isProduction
       ? config.build.productionSourceMap

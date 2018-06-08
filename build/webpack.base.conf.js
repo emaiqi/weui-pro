@@ -1,5 +1,4 @@
 var path = require('path')
-var fs = require('fs')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
@@ -103,15 +102,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new MpvuePlugin(),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: function() {
-          return [
-            require('postcss-mpvue-wxss')
-          ]
-        }
-      }
-    })
+    new MpvuePlugin()
   ]
 }
