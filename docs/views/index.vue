@@ -8,7 +8,7 @@
         </div>
         <h1>开箱即用的小程序解决方案</h1>
         <div class="btn-container">
-          <div class="btn btn-begin"><router-link :to="{ name: 'Introduction' }">开始使用</router-link></div>
+          <div class="btn btn-begin"><router-link :to="{ name: 'Docs' }">开始使用</router-link></div>
           <div class="btn btn-guide"><router-link :to="{ name: 'Color' }">设计语言</router-link></div>
         </div>
       </div>
