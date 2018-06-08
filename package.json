@@ -10,7 +10,7 @@
     "start": "nodemon build/docs/dev-server",
     "build": "node build/build.js",
     "build:docs": "webpack --config build/docs/webpack.prod.conf.js -p",
-    "deploy": "npm run build:docs && gh-pages -d www",
+    "deploy": "rimraf www && npm run build:docs && gh-pages -b master -d www -r https://github.com/weui-pro/weui-pro.github.io.git",
     "lint": "eslint --ext .js,.vue src"
   },
   "repository": {

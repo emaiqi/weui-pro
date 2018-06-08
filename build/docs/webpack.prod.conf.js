@@ -47,7 +47,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       processor: source => source.replace(/static\/fonts/g, '../fonts')
     }),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(config.config.projectRoot, 'docs/assets/favicon.png'),
+      logo: path.resolve(config.config.projectRoot, '../docs/assets/favicon.png'),
       prefix: 'favicons/'
     }),
     // generate dist index.html with correct asset hash for caching.

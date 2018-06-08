@@ -9,7 +9,7 @@
         </transition>
       </div>
     </div>
-    <m-footer></m-footer>
+    <!--<m-footer></m-footer>-->
   </div>
 </template>
 
