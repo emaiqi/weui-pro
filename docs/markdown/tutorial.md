@@ -9,23 +9,29 @@ WeUI Pro 致力于提供给程序员愉悦的开发体验。
 > 在开始之前，推荐先学习 `Vue` 和 `ES2015` ，并正确安装和配置了 `Node.js` 6.x 或以上版本。
 官方指南假设你已了解关于 HTML、CSS 和 JavaScript 的中级知识，并且已经完全掌握了 Vue 全家桶的正确开发方式。如果你刚开始学习小程序或者 Vue，将 UI 框架作为你的第一步可能不是最好的主意。
 
+如果你还不了解 `mpvue` 是什么，请先阅读 [使用手册](http://mpvue.com/mpvue)。
+
 ## 模板工程
 
 我们提供了一个模板工程，可通过 `vue-cli` 工具初始化模板项目，快速搭建小程序应用。
 
+- vue-cli 2.0（[模板](https://github.com/weui-pro/weui-pro-template)）
+
 ```
-vue init weui-pro/weui-template my-project
+vue init weui-pro/weui-pro-template my-project
 ```
 
-如果不想使用 `vue-cli` 工具，我们也同样提供了可直接使用的模板工程：[weui-start]()
+如果不想使用 `vue-cli` 工具，我们也同样提供了可直接使用的项目工程：[weui-pro-starter](https://github.com/weui-pro/weui-pro-starter)
 
 ## 标准开发
 
-实际项目中，往往会使用 `webpack`，`rollup` 或者 `gulp` 的工作流，大多可以做到按需加载页面用到的组件，所以不推荐直接使用 `<script>` 标签全局引入的方式使用。
+实际项目中，往往会使用 `webpack`，`rollup` 或者 `gulp` 的工作流，大多可以做到按需加载页面用到的组件，所以不推荐直接使用 `<script>` 标签的全局引入方式。
 
-#### 全局引入
+***
+**注意**：目前仅支持直接引用 vue 文件，以下代码仅供参考
+***
 
-**注意**：目前版本暂不支持全局引入
+#### 完整引入
 
 可以在项目的入口文件中引入所有组件或所需组件：
 
@@ -43,13 +49,13 @@ Vue.use(WeUI)
 
 #### 按需引入
 
-可以局部注册所需的组件，适用于与其他框架组合使用的场景。首先我们需要借助 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 插件以达到减小项目体积的目的。
+借助 [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports)，我们可以只引入需要的组件，以达到减小项目体积的目的。
 
 ```
-npm install babel-plugin-import
+npm install babel-plugin-import -D
 ```
 
-然后修改 `.babelrc` 配置：
+然后，将 `.babelrc` 修改为：
 
 ```js
 {
@@ -61,7 +67,29 @@ npm install babel-plugin-import
 }
 ```
 
-接下来引入你需要用的组件：
+接下来，如果你只希望引入部分组件，比如 Cell 和 Group，那么需要在 main.js 中写入以下内容：
+
+```js
+import Vue from 'vue';
+import App from './App.vue';
+import { Cell, Group } from 'weui-pro';
+
+Vue.component(Cell.name, Cell);
+Vue.component(Group.name, Group);
+
+/* 或写为
+ * Vue.use(Button)
+ * Vue.use(Select)
+ */
+
+Vue.config.productionTip = false
+App.mpType = 'app'
+
+const app = new Vue(App)
+app.$mount()
+```
+
+或在页面中使用：
 
 ```js
 import { Avatar } from 'weui-pro'
@@ -123,7 +151,7 @@ Vue.prototype.$Toptips = Toptips
 
 ## 定制主题
 
-WeUI Pro 的样式已抽离成单独的项目 [WeUI-Pro-Style](https://github.com/WeUI-Pro/weui-pro-style)，各个组件的样式变量都存放在 `weui-pro-style/src/variables/default.scss` 文件中。用户可根据实际需要，自定义组件的样式
+WeUI Pro 的样式已抽离成单独的项目 [WeUI-Pro-Style](https://github.com/WeUI-Pro/weui-pro-style)，各个组件的样式变量都存放在 `weui-pro-style/src/base/variable/color.less` 文件中。可根据实际需要，自定义组件的样式。
 
 ## 开始使用
 

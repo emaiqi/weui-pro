@@ -16,12 +16,14 @@
     - title: 概述
       name: Docs
       items:
-        - title: 开始使用
-          name: Introduction
+        - title: 介绍
+          name: Intro
         - title: 快速上手
-          name: Quickstart
+          name: Tutorial
         - title: 更新日志
           name: Changelog
+        - title: 开发指南
+          name: development
         - title: 常见问题
           name: FAQ
         - title: 贡献指南

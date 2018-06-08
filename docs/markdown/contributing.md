@@ -4,11 +4,11 @@
 
 这篇指南会指导你如何为 WeUI Pro 贡献一份自己的力量，请在你要提 issue 或者 pull request 之前花几分钟来阅读一遍这篇指南。
 
-## 行为准则
+## 开放讨论
 
-我们有一份 [行为准则]()，希望所有的贡献者都能遵守，请花时间阅读一遍全文以确保你能明白哪些是可以做的，哪些是不可以做的。
+我们使用 [GitHub Project](https://github.com/weui-pro/weui-pro/projects) 进行项目管理，所有任务进度和开发计划都公开透明。
 
-## 透明的开发
+## 开放开发
 
 我们所有的工作都会放在 [GitHub](https://github.com/WeUI-Pro/weui-pro) 上。不管是核心团队的成员还是外部贡献者的 pull request 都需要经过同样流程的 review。
 
@@ -18,21 +18,19 @@
 
 ## Bugs
 
-我们使用 [GitHub Issues](https://github.com/WeUI-Pro/weui-pro/issues) 来做 bug 追踪。 如果你想要你发现的 bug 被快速解决，最好的办法就是正确选择 issue 的标记后提交。
+我们使用 [GitHub Issues](https://github.com/WeUI-Pro/weui-pro/issues) 来做 bug 追踪。 如果你想要你发现的 bug 被快速解决，最好的办法就是通过我们提供的 [issue 小助手](https://weui-pro.github.io/weui-pro-helper) 来提 issue。
 
 在你报告一个 bug 之前，请先确保已经搜索过已有的 issue 和阅读了我们的 [常见问题](faq)。
 
 ## 新增功能
 
-如果你有改进我们的 API 或者新增功能的想法，我们同样推荐你通过 [GitHub Issues](https://github.com/WeUI-Pro/weui-pro/issues) 来新建一个添加新功能的 issue。
+如果你有改进我们的 API 或者新增功能的想法，我们同样推荐你使用我们提供的 [issue 小助手](https://weui-pro.github.io/weui-pro-helper) 来新建一个添加新功能的 issue。
 
-## 第一次贡献
+## 参与贡献
 
 如果你还不清楚怎么在 GitHub 上提 Pull Request ，可以阅读下面这篇文章来学习：
 
 [如何优雅地在 GitHub 上贡献代码](https://segmentfault.com/a/1190000000736629)
-
-为了能帮助你开始你的第一次尝试，我们在 [GitHub Issues](https://github.com/WeUI-Pro/weui-pro/issues) 标记了一些比较比较容易修复的 bug 和小功能。这些 issue 可以很好地做为你的首次尝试。
 
 如果你打算开始处理一个 issue，请先检查一下 issue 下面的留言以确保没有别人正在处理这个 issue。如果当前没有人在处理的话你可以留言告知其他人你将会处理这个 issue，以免别人重复劳动。
 
@@ -44,7 +42,7 @@
 
 **在你发送 Pull Request 之前**，请确认你是按照下面的步骤来做的：
 
-1、基于 [正确的分支](#分支管理) 做修改。
+1、基于正确的分支做修改。
 
 2、在项目根目录下运行了 `npm install`。
 
@@ -52,14 +50,5 @@
 
 4、确保你的代码通过了 lint 检查 `npm run lint`。
 
-**小贴士**: Lint 会在你 `git commit` 的时候自动运行。
-
-## 开发流程
-
-在你 clone 了 WeUI Pro  的代码并且使用 `npm install` 安装完依赖后，你还可以运行下面几个常用的命令：
-
-1、`npm start` 或 `npm run dev` 在本地运行示例代码。
-
-2、`npm run lint` 检查代码风格。
-
-3、`npm run build` 构建示例代码到 dist 目录。
+---
+**小贴士**: 为了保证代码规范，Lint 会在你 `git commit` 的时候自动运行。
