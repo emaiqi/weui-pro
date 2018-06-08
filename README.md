@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# WeUI Pro
+---
 
 WeUI Pro 是一个开箱即用的小程序解决方案，我们遵循 WeUI Design 设计规范，进一步提升小程序产品设计研发过程中的『用户』和『设计者』的体验。随着『设计者』的不断反馈，我们将持续迭代，逐步沉淀和总结出更多设计模式和相应的代码实现，阐述小程序模板/组件/业务场景的最佳实践，也十分期待你的参与和共建。
 
@@ -21,8 +21,8 @@ WeUI Pro 是一个开箱即用的小程序解决方案，我们遵循 WeUI Desig
 
 ## 版本
 
-- `WeUI Pro`：!!!
-- `weui-wxss`：[![npm version](https://img.shields.io/npm/v/weui-wxss.svg)](https://github.com/Tencent/weui-wxss)
+- `WeUI Pro`：[![npm version](https://img.shields.io/npm/v/weui-pro.svg)](https://www.npmjs.org/package/weui-pro)
+- `WeUI Pro Style`：[![npm version](https://img.shields.io/npm/v/weui-pro-style.svg)](https://www.npmjs.org/package/weui-pro-style)
 
 ## 浏览器支持
 - iOS 6+
