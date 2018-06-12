@@ -13,4 +13,5 @@
 
 <style lang="less">
   @import "app.less";
+  @import "../style/src/weui.less";
 </style>

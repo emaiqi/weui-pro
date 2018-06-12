@@ -1,6 +1,7 @@
 <template>
   <view class="container">
     <head-view title="grid" desc="九宫格"></head-view>
+    <grid></grid>
     <view class="weui-grids">
       <view class="weui-grid">
         <view class="weui-grid__icon">
@@ -44,8 +45,9 @@
 </template>
 
 <script>
-  import Header from '../../components/header'
-  import Footer from '../../components/footer'
+  import Grid from 'weui/grid/grid'
+  import Header from 'components/header'
+  import Footer from 'components/footer'
 
   export default {
     data () {
@@ -55,6 +57,7 @@
     methods: {},
 
     components: {
+      Grid,
       headView: Header,
       footView: Footer
     }

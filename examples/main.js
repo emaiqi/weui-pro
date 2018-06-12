@@ -10,7 +10,8 @@ app.$mount()
 export default {
   config: {
     pages: [
-      '^pages/index/main',
+      '^pages/grid/main',
+      'pages/index/main',
       'pages/view/main',
       'pages/scroll-view/main',
       'pages/swiper/main',
@@ -35,8 +36,7 @@ export default {
       'pages/video/main',
       'pages/canvas/main',
       'pages/map/main',
-      'pages/flex/main',
-      'pages/grid/main'
+      'pages/flex/main'
     ],
     window: {
       backgroundTextStyle: 'light',
