@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     handleCopySuccess (evt) {
-      this.$Message.success(`复制成功！`)
+      this.$Message.success(`复制成功`)
     }
   }
 }

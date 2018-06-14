@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     handleCopySuccess (evt) {
-      this.$Message.success(`[ ${evt.text} ] 复制成功！`)
+      this.$Message.success(`[ ${evt.text} ] 复制成功`)
     }
   }
 }
