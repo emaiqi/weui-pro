@@ -19,7 +19,6 @@
     name: 'grid-item',
     props: ['icon', 'label', 'link'],
     created () {
-      console.log('grid-item', this, this.$parent.countColumn())
       this.$parent.countColumn()
     },
     mounted () {
@@ -32,7 +31,6 @@
     methods: {
       onClick () {
         this.$emit('on-item-click')
-        console.log('嘿嘿嘿...')
       }
     },
     computed: {

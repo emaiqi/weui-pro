@@ -12,9 +12,6 @@
         type: Number
       }
     },
-    created () {
-      console.log('grid', this)
-    },
     methods: {
       countColumn () {
         this.childrenSize = this.$children.length
