@@ -26,9 +26,9 @@
 </template>
 
 <script>
-  import Grid from 'weui/grid/grid'
   import Header from 'components/header'
   import Footer from 'components/footer'
+  import Grid from 'weui/grid/grid'
   import GridItem from 'weui/grid/grid-item'
 
   export default {

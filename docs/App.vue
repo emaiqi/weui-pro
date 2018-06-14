@@ -13,3 +13,7 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+  @import "../style/src/weui.less";
+</style>
