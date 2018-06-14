@@ -1,43 +1,24 @@
 <template>
   <view class="container">
     <head-view title="grid" desc="九宫格"></head-view>
-    <grid></grid>
-    <view class="weui-grids">
-      <view class="weui-grid">
-        <view class="weui-grid__icon">
-          <image src="/static/image/icon_tabbar.png" alt=""></image>
+    <view class="page-body">
+      <view class="page-section">
+        <view class="page-section-title">
+          <text>基本用法</text>
         </view>
-        <view class="weui-grid__label">Grid</view>
+        <grid>
+          <grid-item label="Grid" icon="/static/image/icon_tabbar.png"></grid-item>
+          <grid-item label="Grid" icon="/static/image/icon_tabbar.png"></grid-item>
+          <grid-item label="Grid" icon="/static/image/icon_tabbar.png"></grid-item>
+        </grid>
       </view>
-      <view class="weui-grid">
-        <view class="weui-grid__icon">
-          <image src="/static/image/icon_tabbar.png" alt=""></image>
+      <view class="page-section">
+        <view class="page-section-title">
+          <text>自定义列</text>
         </view>
-        <view class="weui-grid__label">Grid</view>
-      </view>
-      <view class="weui-grid">
-        <view class="weui-grid__icon">
-          <image src="/static/image/icon_tabbar.png" alt=""></image>
-        </view>
-        <view class="weui-grid__label">Grid</view>
-      </view>
-      <view class="weui-grid">
-        <view class="weui-grid__icon">
-          <image src="/static/image/icon_tabbar.png" alt=""></image>
-        </view>
-        <view class="weui-grid__label">Grid</view>
-      </view>
-      <view class="weui-grid">
-        <view class="weui-grid__icon">
-          <image src="/static/image/icon_tabbar.png" alt=""></image>
-        </view>
-        <view class="weui-grid__label">Grid</view>
-      </view>
-      <view class="weui-grid">
-        <view class="weui-grid__icon">
-          <image src="/static/image/icon_tabbar.png" alt=""></image>
-        </view>
-        <view class="weui-grid__label">Grid</view>
+        <grid cols="5">
+          <grid-item v-for="i in 10" :key="i" label="Grid" icon="/static/image/icon_tabbar.png"></grid-item>
+        </grid>
       </view>
     </view>
     <foot-view></foot-view>
@@ -48,6 +29,7 @@
   import Grid from 'weui/grid/grid'
   import Header from 'components/header'
   import Footer from 'components/footer'
+  import GridItem from 'weui/grid/grid-item'
 
   export default {
     data () {
@@ -58,15 +40,9 @@
 
     components: {
       Grid,
+      GridItem,
       headView: Header,
       footView: Footer
     }
   }
 </script>
-
-<style scoped>
-  image {
-    width: 100%;
-    height: 100%;
-  }
-</style>

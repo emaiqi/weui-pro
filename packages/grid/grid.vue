@@ -1,30 +1,35 @@
 <template>
   <div class="weui-grids">
-    <a href="javascript:;" class="weui-grid">
-      <div class="weui-grid__icon">
-        <img src="/static/image/icon_tabbar.png" alt="">
-      </div>
-      <p class="weui-grid__label">
-        Button
-      </p>
-    </a>
-    <a href="javascript:;" class="weui-grid">
-      <div class="weui-grid__icon">
-        <img src="/static/image/icon_tabbar.png" alt="">
-      </div>
-      <p class="weui-grid__label">
-        Cell
-      </p>
-    </a>
+    <slot></slot>
   </div>
 </template>
 
 <script>
   export default {
     name: 'grid',
-    data () {},
-    props: {},
-    methods: {},
-    computed: {}
+    props: {
+      cols: {
+        type: Number
+      }
+    },
+    created () {
+      console.log('grid', this)
+    },
+    methods: {
+      countColumn () {
+        this.childrenSize = this.$children.length
+        this.$children.forEach((c, index) => (c.index = index))
+      }
+    },
+    computed: {
+      column () {
+        return this.cols || this.childrenSize
+      }
+    },
+    data () {
+      return {
+        childrenSize: 3
+      }
+    }
   }
 </script>
