@@ -35,7 +35,7 @@ const vueMarkdown = {
 
 module.exports = {
   entry: {
-    'main': './docs/main.js',
+    'main': './docs/main.js'
   },
   output: {
     path: config.build.assetsRoot,
