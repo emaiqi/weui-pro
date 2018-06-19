@@ -1,40 +1,61 @@
 <template>
-  <view class="container">
+  <div class="container">
     <head-view title="flex" desc="弹性布局"></head-view>
-    <view class="page-body">
-      <view class="page-section">
-        <view class="weui-flex">
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-        </view>
-        <view class="weui-flex">
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-        </view>
-        <view class="weui-flex">
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-        </view>
-        <view class="weui-flex">
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-        </view>
-        <view class="weui-flex">
-          <view><view class="placeholder">weui</view></view>
-          <view class="weui-flex__item"><view class="placeholder">weui</view></view>
-          <view><view class="placeholder">weui</view></view>
-        </view>
-      </view>
-    </view>
+    <div class="page-body">
+      <div class="page-section">
+        <div class="page-section-title">
+          <text>基本用法</text>
+        </div>
+        <flex>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+        </flex>
+        <flex>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+        </flex>
+        <flex>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+        </flex>
+        <flex>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+        </flex>
+      </div>
+      <div class="page-section">
+        <div class="page-section-title">
+          <text>弹性网格</text>
+        </div>
+        <flex wrap="wrap">
+          <flex-item :span="4"><div class="placeholder">1/3</div></flex-item>
+          <flex-item :span="8" :order="-1"><div class="placeholder">2/3</div></flex-item>
+
+          <flex-item :span="6"><div class="placeholder">1/2</div></flex-item>
+          <flex-item :span="4"><div class="placeholder">1/3</div></flex-item>
+          <flex-item :span="2"><div class="placeholder">1/6</div></flex-item>
+
+          <flex-item :span="1/3"><div class="placeholder">1/3</div></flex-item>
+          <flex-item :span="1/3"><div class="placeholder">1/3</div></flex-item>
+          <flex-item :span="1/3"><div class="placeholder">1/3</div></flex-item>
+
+          <flex-item :span="1/4"><div class="placeholder">1/4</div></flex-item>
+          <flex-item :span="1/4"><div class="placeholder">1/4</div></flex-item>
+          <flex-item><div class="placeholder">1/2</div></flex-item>
+        </flex>
+      </div>
+    </div>
     <foot-view></foot-view>
-  </view>
+  </div>
 </template>
 
 <script>
   import Header from '../../components/header'
   import Footer from '../../components/footer'
+  import Flex from 'weui/flex/flex'
+  import FlexItem from 'weui/flex/flex-item'
 
   export default {
     data () {
@@ -44,6 +65,8 @@
     methods: {},
 
     components: {
+      Flex,
+      FlexItem,
       'head-view': Header,
       'foot-view': Footer
     }
