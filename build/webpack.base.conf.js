@@ -42,6 +42,7 @@ module.exports = {
       'vue': 'mpvue',
       'weui': resolve('packages'),
       'style': resolve('style/src'),
+      'utils': resolve('utils/utils.js'),
       'components': resolve('examples/components')
     },
     symlinks: false,
