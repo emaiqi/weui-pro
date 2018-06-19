@@ -5,5 +5,5 @@
 export function toStyle (obj) {
   let objStr = JSON.stringify(obj)
   objStr = objStr.slice(1, objStr.length - 1).replace(/"/g, '')
-  return objStr.replace(',', ';')
+  return objStr.replace(/,/g, ';')
 }
