@@ -36,9 +36,12 @@
     computed: {
       style () {
         let styles = {}
-        let marginName = this.$parent.orient === 'horizontal' ? 'marginLeft' : 'marginTop'
         if (this.$parent.gutter * 1 !== 0) {
-          styles[marginName] = `${this.$parent.gutter}px`
+          if (this.$parent.direction.indexOf('column') > 0) {
+            styles.padding = `-${this.gutter / 2}px 0`
+          } else {
+            styles.padding = `0 -${this.gutter / 2}px`
+          }
         }
         if (this.span) {
           styles.flex = `0 0 ${this.buildWidth(this.span) * 100}%`
