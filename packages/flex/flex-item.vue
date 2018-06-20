@@ -38,9 +38,9 @@
         let styles = {}
         if (this.$parent.gutter * 1 !== 0) {
           if (this.$parent.direction.indexOf('column') > 0) {
-            styles.padding = `-${this.gutter / 2}px 0`
+            styles.padding = `${this.$parent.gutter / 2}px 0`
           } else {
-            styles.padding = `0 -${this.gutter / 2}px`
+            styles.padding = `0 ${this.$parent.gutter / 2}px`
           }
         }
         if (this.span) {
