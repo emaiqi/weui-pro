@@ -4,7 +4,7 @@
     <div class="page-body">
       <div class="page-section">
         <div class="page-section-title">
-          <text>基本用法</text>
+          <text>基本栅格</text>
         </div>
         <flex>
           <flex-item><div class="placeholder">weui</div></flex-item>
@@ -27,23 +27,31 @@
       </div>
       <div class="page-section">
         <div class="page-section-title">
-          <text>弹性网格</text>
+          <text>区块间隔</text>
         </div>
-        <flex wrap="wrap">
+        <flex :gutter="32">
+          <flex-item><div class="placeholder">weui</div></flex-item>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+          <flex-item><div class="placeholder">weui</div></flex-item>
+        </flex>
+      </div>
+      <div class="page-section">
+        <div class="page-section-title">
+          <text>混合布局</text>
+        </div>
+        <flex wrap="wrap" :gutter="0">
+          <flex-item :span="8"><div class="placeholder">2/3</div></flex-item>
           <flex-item :span="4"><div class="placeholder">1/3</div></flex-item>
-          <flex-item :span="8" :order="-1"><div class="placeholder">2/3</div></flex-item>
 
-          <flex-item :span="6"><div class="placeholder">1/2</div></flex-item>
+          <flex-item :span="4"><div class="placeholder">1/3</div></flex-item>
           <flex-item :span="4"><div class="placeholder">1/3</div></flex-item>
           <flex-item :span="2"><div class="placeholder">1/6</div></flex-item>
+          <flex-item :span="2"><div class="placeholder">1/6</div></flex-item>
 
-          <flex-item :span="1/3"><div class="placeholder">1/3</div></flex-item>
-          <flex-item :span="1/3"><div class="placeholder">1/3</div></flex-item>
-          <flex-item :span="1/3"><div class="placeholder">1/3</div></flex-item>
-
-          <flex-item :span="1/4"><div class="placeholder">1/4</div></flex-item>
-          <flex-item :span="1/4"><div class="placeholder">1/4</div></flex-item>
-          <flex-item><div class="placeholder">1/2</div></flex-item>
+          <flex-item :span="2"><div class="placeholder">1/6</div></flex-item>
+          <flex-item :span="8"><div class="placeholder">2/3</div></flex-item>
+          <flex-item :span="2"><div class="placeholder">1/6</div></flex-item>
         </flex>
       </div>
     </div>
@@ -77,10 +85,14 @@
   .placeholder {
     margin: 5px;
     padding: 0 10px;
+    border-radius: 4px;
     background-color: #EBEBEB;
     height: 2.3em;
     line-height: 2.3em;
     text-align: center;
     color: #CFCFCF;
+  }
+  .weui-flex {
+    padding: 0 10px;
   }
 </style>
