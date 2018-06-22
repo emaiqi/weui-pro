@@ -1,13 +1,12 @@
 <template>
-  <div class="weui-cell"  :class="{'weui-cell_access': showAccess, 'weui-cell_link': isLink, 'weui-cell_intent': intent}"
-       :hover-class="showAccess ? 'weui-cell_active' : ''">
+  <div class="weui-cell"  :class="{'weui-cell_access': showAccess, 'weui-cell_link': isLink, 'weui-cell_intent': intent}">
     <div class="weui-cell__hd" v-if="icon">
       <img :src="icon" />
     </div>
     <div class="weui-cell__bd">
       <p>{{title}}</p>
     </div>
-    <div class="weui-cell__ft" :class="{'weui-cell__ft_in-access': showAccess}">
+    <div class="weui-cell__ft" v-if="value || showAccess">
       {{value}}
     </div>
   </div>
