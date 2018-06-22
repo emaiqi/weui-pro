@@ -49,13 +49,11 @@
               name: Loadmore
         - title: 页面布局
           items:
-            - title: 弹性布局
-              name: Flex
             - title: 九宫格
               name: Grid
-            - title: 单元格
-              name: Cell
-            - title: 表单分组
+            - title: 弹性布局
+              name: Flex
+            - title: 列表视图
               name: Group
             - title: 面板组件
               name: Panel
