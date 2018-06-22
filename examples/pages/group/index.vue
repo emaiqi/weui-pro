@@ -27,8 +27,8 @@
           <text>带跳转的列表项</text>
         </div>
         <group>
-          <group-item title="标题文字" value="说明文字" :showAccess="true"></group-item>
-          <group-item title="标题文字" value="说明文字" :showAccess="true"></group-item>
+          <group-item title="标题文字" value="说明文字" :show-access="true"></group-item>
+          <group-item title="标题文字" value="说明文字" :show-access="true"></group-item>
         </group>
       </div>
 
@@ -37,8 +37,8 @@
           <text>显示超链接样式</text>
         </div>
         <group>
-          <group-item title="标题文字" :showAccess="true" :isLink="true" :intent="true"></group-item>
-          <group-item title="标题文字" :showAccess="true" :isLink="true" :intent="true"></group-item>
+          <group-item title="标题文字" :show-access="true" :is-link="true" :intent="true"></group-item>
+          <group-item title="标题文字" :show-access="true" :is-link="true" :intent="true"></group-item>
         </group>
       </div>
     </div>
